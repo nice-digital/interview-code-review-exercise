@@ -1,0 +1,14 @@
+{
+  "name": "stemming-frequency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stemmingFrequency.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Unknown",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^28.1.0"
+  }
+}
