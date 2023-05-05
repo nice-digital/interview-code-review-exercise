@@ -26,6 +26,7 @@ Lead developers often have a busy schedule and the timings of this exercise have
 ### What we're assessing
 This exercise will help us to assess:
 
+- Your high level knowledge of a programming language, testing and good code design
 - Your approach to upholding good engineering standards
 - How you hold others to account for their development work
 - Your communication skills
