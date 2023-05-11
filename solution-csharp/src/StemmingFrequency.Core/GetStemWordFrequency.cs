@@ -1,62 +1,66 @@
-﻿namespace StemmingFrequency.Core;
+﻿using System.Collections.Generic;
+using System.Linq;
 
-/// <summary>
-/// Contains logic for counting the frequency of the stem words.
-/// </summary>
-public class GetStemWordFrequency : IGetStemWordFrequency 
+namespace StemmingFrequency.Core
 {
-    #region PrivateMembers
-    private readonly WordStemming _wordStemming;
-    private Dictionary<string, int> _stemmedWordCount;
-
-
-    #endregion PrivateMembers
-
-    #region Constructor
-
-    public GetStemWordFrequency()
+    /// <summary>
+    /// Contains logic for counting the frequency of the stem words.
+    /// </summary>
+    public class GetStemWordFrequency : IGetStemWordFrequency
     {
-        _wordStemming = new WordStemming();
-        _stemmedWordCount = new Dictionary<string, int>();
-    }
+        #region PrivateMembers
+        private readonly WordStemming _wordStemming;
+        private Dictionary<string, int> _stemmedWordCount;
 
-    #endregion
 
-    #region PublicMethods
+        #endregion PrivateMembers
+
+        #region Constructor
+
+        public GetStemWordFrequency()
+        {
+            _wordStemming = new WordStemming();
+            _stemmedWordCount = new Dictionary<string, int>();
+        }
+
+        #endregion
+
+        #region PublicMethods
 
         public void Run(string s)
-    {
-        var words = s.Split(',', ' ', '\t');
-        _stemmedWordCount = words
-            .Where(x => !string.IsNullOrEmpty(x))
-            .Select(x => x.Trim())
-            .Select(z => _wordStemming.GetStemmedWord(z))
-            .GroupBy(x => x)
-            .ToDictionary(x => x.Key, y => y.Count());
-    }
-
-    //public void Run(string s)
-    //{
-    //    var words = s.Split(',', ' ', '\t');
-    //    _stemmedWordCount = words
-    //        .Where(x => !string.IsNullOrEmpty(x))
-    //        .Select(z => _wordStemming.GetStemmedWord(z))
-    //        .GroupBy(x => x)
-    //        .ToDictionary(x => x.Key, y => y.Count());
-    //}
-
-    public int Count(string w)
-    {
-        var stemmedWord = _wordStemming.GetStemmedWord(w);
-        var count = 0;
-        try
         {
-            count = _stemmedWordCount[stemmedWord];
+            var words = s.Split(',', ' ', '\t');
+            _stemmedWordCount = words
+                .Where(x => !string.IsNullOrEmpty(x))
+                .Select(x => x.Trim())
+                .Select(z => _wordStemming.GetStemmedWord(z))
+                .GroupBy(x => x)
+                .ToDictionary(x => x.Key, y => y.Count());
         }
-        catch { }
-        
-        return count;
-    }
-    #endregion
 
+        //public void Run(string s)
+        //{
+        //    var words = s.Split(',', ' ', '\t');
+        //    _stemmedWordCount = words
+        //        .Where(x => !string.IsNullOrEmpty(x))
+        //        .Select(z => _wordStemming.GetStemmedWord(z))
+        //        .GroupBy(x => x)
+        //        .ToDictionary(x => x.Key, y => y.Count());
+        //}
+
+        public int Count(string w)
+        {
+            var stemmedWord = _wordStemming.GetStemmedWord(w);
+            var count = 0;
+            try
+            {
+                count = _stemmedWordCount[stemmedWord];
+            }
+            catch { }
+
+            return count;
+        }
+        #endregion
+
+    }
 }
