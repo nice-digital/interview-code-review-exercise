@@ -10,7 +10,7 @@ This repository contains details of a small and relevant problem with a senior d
 
 ### Code review exercise instructions
 - Read the [Problem specification](PROBLEM-SPEC.md)
-- Choose *either* the JS or the C# solution to review
+- Choose *either* the JS or the C# solution to review.  The **main** branch uses .netcore6 but there are branches for **net5** (dotnetcore 5) and a **net472** branch (.net framework 4.7.2) if thats easier for you to open
 - Spend up to 30 mins reviewing the code, its up to you how you gather your feedback.
 - Spend 15 mins sharing your code review feedback to the interview panel 
 
