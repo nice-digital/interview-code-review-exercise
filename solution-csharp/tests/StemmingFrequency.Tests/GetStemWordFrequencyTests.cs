@@ -1,4 +1,5 @@
 using StemmingFrequency.Core;
+using System.Collections.Generic;
 using Xunit;
 
 namespace StemmingFrequency.Tests
