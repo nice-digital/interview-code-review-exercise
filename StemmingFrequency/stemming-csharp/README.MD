@@ -1,0 +1,1 @@
+The **main** branch uses .netcore6 but there are branches for **net5** (dotnetcore 5) and a **net472** branch (.net framework 4.7.2) if thats easier for you to open
