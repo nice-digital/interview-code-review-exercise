@@ -9,8 +9,9 @@ Reviewing other developers work is a typical lead developer activity, and a usef
 This repository contains details of a small and relevant problem with a senior developer's coding solution. There is a solution written in Javascript and also a solution written in C#.  You'll choose one of these solutions to review.  
 
 ### Code review exercise instructions
-- Read the [Problem specification](PROBLEM-SPEC.md)
-- Choose *either* the JS or the C# solution to review
+- Choose a subfolder for the relevant problem
+- Read the PROBLEM-SPEC.md in the relevant subfolder
+- Choose *one* language solution to review
 - Spend up to 30 mins reviewing the code, its up to you how you gather your feedback.
 - Spend 15 mins sharing your code review feedback to the interview panel 
 
