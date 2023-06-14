@@ -6,10 +6,10 @@ As part of the interview process, we ask candidates to review some code so that 
 
 Reviewing other developers work is a typical lead developer activity, and a useful way of keeping an eye on the general technical implementation direction of your team.  
 
-This repository contains details of a small and relevant problem with a senior developer's coding solution. There is a solution written in Javascript and also a solution written in C#.  You'll choose one of these solutions to review.  
+This repository contains details of a small and relevant problem with a senior developer's coding solution. For some of the problems there will be a choice of languages solutions to choose to review.  
 
 ### Code review exercise instructions
-- Choose a subfolder for the relevant problem
+- Find the relevant problem subfolder (we'll indicate which problem to look at)
 - Read the PROBLEM-SPEC.md in the relevant subfolder
 - Choose *one* language solution to review
 - Spend up to 30 mins reviewing the code, its up to you how you gather your feedback.
